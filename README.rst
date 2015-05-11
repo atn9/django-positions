@@ -2,7 +2,12 @@
 Django Positions
 ================
 
-This module provides ``PositionField``, a model field for Django_ that allows
+
+.. image:: https://travis-ci.org/jpwatts/django-positions.svg?branch=master
+    :target: https://travis-ci.org/jpwatts/django-positions
+
+
+This module provides ``PositionField``, a model field for `Django`_ that allows
 instances of a model to be sorted by a user-specified position.  Conceptually,
 the field works like a list index: when the position of one item is changed, the
 positions of other items in the collection are updated in response.
@@ -92,5 +97,6 @@ Limitations
   using a single SQL ``UPDATE`` statement, this means the ``save`` method of the
   other instances won't be called.  As a partial work-around to this issue,
   any ``DateTimeField`` with ``auto_now=True`` will be assigned the current time.
+
 
 .. _`Django`: http://www.djangoproject.com/
